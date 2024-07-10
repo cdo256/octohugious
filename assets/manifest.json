@@ -8,7 +8,7 @@
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "{{ "./octocurious-3-favicon-512.ico" | relURL }}",
+      "src": "{{ "./favicon-512.ico" | relURL }}",
       "sizes": "512x512"
     }
   ]

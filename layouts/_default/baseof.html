@@ -5,6 +5,9 @@
   {{ partial "docs/inject/head" . }}
 </head>
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+  <header class="site-header">
+    {{ partial "docs/site-header" . }}
+  </header>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
@@ -16,7 +19,7 @@
 
     <div class="book-page">
       <header class="book-header">
-        {{ template "header" . }} <!-- Mobile layout header -->
+        {{ partial "docs/page-header" . }} <!-- Mobile layout header -->
       </header>
 
       {{ partial "docs/inject/content-before" . }}
