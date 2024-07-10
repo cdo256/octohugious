@@ -30,8 +30,47 @@
        url('fonts/roboto-mono-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@font-face {
+  font-family: "dongle";
+  src: local("dongle"),
+       url("fonts/dongle-ansi-light.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 200%;
+}
+
+@font-face {
+  font-family: "dongle";
+  src: local("dongle"),
+       url("fonts/dongle-ansi-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 200%;
+}
+
+@font-face {
+  font-family: "dongle";
+  src: local("dongle"),
+       url("fonts/dongle-ansi-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 200%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: dongle, sans-serif;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+//TODO: check DOM layout
+main header {
+  font-family: dongle, sans-serif;
 }
 
 code {
