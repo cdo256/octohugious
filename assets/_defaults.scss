@@ -30,6 +30,7 @@ $hint-colors: (
 
 // Themes
 @mixin theme-light {
+  // TODO: Adjust.
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-500: #adb5bd;
@@ -45,5 +46,29 @@ $hint-colors: (
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+
+  /* Set sans-serif & mono fonts */
+  --sans-font: "Roboto", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+               "Nimbus Sans L", "Noto Sans", "Segoe UI", Arial, Helvetica,
+               "Helvetica Neue", sans-serif;
+  --mono-font: "Roboto Mono", Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --brand-font: "Dongle", var(--sans-font);
+  --standard-border-radius: 10px;
+
+  --bg: #edf6f7aa;
+  --accent-bg: transparent;
+  --accent: #3f00d2;
+  --accent-hover: #3f00d2;
+  --brand: #7f1373;
+  --brand-desaturated: #4f4f4f;
+  --backdrop: linear-gradient(0deg, #437f7c 0%, #e2f4f8 100%);
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898EA4;
+  --accent-text: var(--bg);
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
 }
 

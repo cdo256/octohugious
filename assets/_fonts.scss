@@ -61,18 +61,18 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: dongle, sans-serif;
+  font-family: var(--brand-font);
+}
+
+main header {
+  font-family: var(--brand-font);
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--sans-font);
 }
 
-//TODO: check DOM layout
-main header {
-  font-family: dongle, sans-serif;
-}
 
 code {
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--mono-font);
 }
