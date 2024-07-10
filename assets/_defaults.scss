@@ -28,7 +28,6 @@ $hint-colors: (
   danger: #f66,
 ) !default;
 
-// Themes
 @mixin theme-light {
   // TODO: Adjust.
   --gray-100: #f8f9fa;
