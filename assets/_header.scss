@@ -1,11 +1,43 @@
-body > header {
+.site-header {
     display: flex;
     align-items: center;
     border-bottom: none;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0em 0.5em;
-    max-height: 200px;
     font-family: dongle, sans-serif;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.site-header nav {
+    font-size: 1rem;
+    line-height: 2;
+    padding: 1rem 0 0 0;
+    flex-wrap: nowrap;
+}
+
+.site-header nav ul li,
+.site-header nav ol li {
+    display: inline-block;
+}
+
+.site-header nav a,
+.site-header nav button {
+    margin: 0 0.5rem 1rem 0.5rem;
+    border: 3px solid var(--brand);
+    border-radius: var(--standard-border-radius);
+    color: var(--brand);
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+}
+
+.site-header .menu-button {
+    padding: 0.1rem 0.5rem;
+}
+
+.site-header .menu-button img {
+    vertical-align: middle;
 }
 
 .site-title {

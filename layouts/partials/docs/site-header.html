@@ -6,14 +6,7 @@
     </div>
 </span>
 <nav>
-<ul>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/pages/blog.html">Blog</a></li>
-    <li><a href="/pages/tutoring.html">Tutoring</a></li>
-    <!-- <li><a href="/resume.html">Resume</a></li> -->
-    <li><a href="https://github.com/cdo256">GitHub</a></li>
-</ul>
-{{ partial "docs/search" . }}
+{{/* partial "docs/search" . */}}
 {{ partial "docs/inject/menu-before" . }}
 {{ partial "docs/menu-hugo" .Site.Menus.before }}
 
@@ -22,7 +15,11 @@
 {{ else }}
   {{ partial "docs/menu-filetree" . }}
 {{ end }}
-
-{{ partial "docs/menu-hugo" .Site.Menus.after }}
-{{ partial "docs/inject/menu-after" . }}
+<ul>
+  {{ partial "docs/menu-hugo" .Site.Menus.header }}
+  {{ partial "docs/inject/menu-after" . }}
+  <li>
+      <a class="menu-button" href="#" target="_blank" onClick="alert('todo')"><img src="/svg/menu.svg"></img></a>
+  </li>
+</ul>
 </nav>
