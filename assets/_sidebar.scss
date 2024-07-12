@@ -1,27 +1,9 @@
-aside nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-
-  li {
-    margin: 1em 0;
-    position: relative;
-  }
-
-  a {
-    display: block;
-  }
-
-  a:hover {
-    opacity: 0.5;
-  }
-
-  ul {
-    padding-inline-start: $padding-16;
-  }
-}
 
 .book-menu-content {
+    @include smooth;
+}
+
+.book-menu {
     @include smooth;
 }
 
@@ -32,15 +14,16 @@ aside nav ul {
   position: sticky;
   top: 0;
   align-self: flex-start;
-  height: 100vh;
+  min-height: 100vh;
   overflow: visible;
 
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
     background: var(--sidebar-background);
-    height: 100%;
+    min-height: 100%;
     border-radius: 20px;
+    min-height: 100vh;
   }
 
   a,
@@ -69,16 +52,24 @@ aside nav ul {
   input.toggle:checked + label::after {
     content: "▾";
   }
-}
 
-// for RTL support
-body[dir="rtl"] .book-menu {
-  input.toggle + label::after {
-    content: "◂";
-  }
-
-  input.toggle:checked + label::after {
-    content: "▾";
+  nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      margin: 1em 0;
+      position: relative;
+    }
+    a {
+      display: block;
+    }
+    a:hover {
+      opacity: 0.5;
+    }
+    ul {
+      padding-inline-start: $padding-16;
+    }
   }
 }
 
@@ -88,8 +79,7 @@ body[dir="rtl"] .book-menu {
   }
 
   .book-menu {
-    visibility: hidden;
-    margin-inline-start: -$menu-width;
+    margin-right: -$menu-width - $main-padding;
     font-size: $font-size-base;
     z-index: 1;
     position: -webkit-sticky;
@@ -108,7 +98,7 @@ body[dir="rtl"] .book-menu {
     }
 
     .book-menu .book-menu-content {
-      transform: translateX($menu-width);
+      transform: translateX(-$menu-width - $main-padding);
       box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
     }
 
@@ -123,13 +113,6 @@ body[dir="rtl"] .book-menu {
       bottom: 0;
       left: 0;
       right: 0;
-    }
-  }
-
-  // for RTL support
-  body[dir="rtl"] #menu-control:checked ~ main {
-    .book-menu .book-menu-content {
-      transform: translateX(-$menu-width);
     }
   }
 }

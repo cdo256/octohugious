@@ -10,12 +10,6 @@
   </header>
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        {{ template "menu" . }} <!-- Left menu Content -->
-      </div>
-    </aside>
-
     <div class="book-page">
       <header class="book-header">
         {{ partial "docs/page-header" . }} <!-- Mobile layout header -->
@@ -34,6 +28,11 @@
 
       {{/*<label for="menu-control" class="hidden book-menu-overlay"></label>*/}}
     </div>
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        {{ template "menu" . }} <!-- Left menu Content -->
+      </div>
+    </aside>
   </main>
 
   {{ partial "docs/inject/body" . }}
