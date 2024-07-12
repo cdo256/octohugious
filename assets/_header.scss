@@ -12,7 +12,6 @@
 .site-header nav {
     font-size: 1rem;
     line-height: 2;
-    padding: 1rem 0 0 0;
     flex-wrap: nowrap;
 }
 
@@ -21,11 +20,8 @@
     display: inline-block;
 }
 
-.site-header nav a,
-.site-header nav button,
-.site-header nav label,
-.site-header nav input {
-    margin: 0 0.5rem 1rem 0.5rem;
+.site-header nav li > * {
+    margin: 0 0.5rem 0 0.5rem;
     border: 3px solid var(--brand);
     border-radius: var(--standard-border-radius);
     color: var(--brand);
