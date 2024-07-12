@@ -108,13 +108,17 @@ ul.pagination {
 .book-menu {
   flex: 0 0 $menu-width;
   font-size: $font-size-14;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
 
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
     background: var(--body-background);
-
-    @include fixed;
+    height: 100%;
   }
 
   a,
@@ -235,27 +239,6 @@ body[dir="rtl"] .book-menu {
   }
 }
 
-.book-toc {
-  flex: 0 0 $toc-width;
-  font-size: $font-size-12;
-
-  .book-toc-content {
-    width: $toc-width;
-    padding: $padding-16;
-
-    @include fixed;
-  }
-
-  img {
-    height: 1em;
-    width: 1em;
-  }
-
-  nav > ul > li:first-child {
-    margin-top: 0;
-  }
-}
-
 .book-footer {
   padding-top: $padding-16;
   font-size: $font-size-14;
@@ -287,7 +270,6 @@ body[dir="rtl"] .book-menu {
 
 // Responsive styles
 .book-menu-content,
-.book-toc-content,
 .book-page,
 .book-header aside,
 .markdown {
@@ -306,6 +288,10 @@ body[dir="rtl"] .book-menu {
     margin-inline-start: -$menu-width;
     font-size: $font-size-base;
     z-index: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
   }
 
   .book-header {
