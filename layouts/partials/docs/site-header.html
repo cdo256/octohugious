@@ -19,7 +19,7 @@
   {{ partial "docs/menu-hugo" .Site.Menus.header }}
   {{ partial "docs/inject/menu-after" . }}
   <li>
-      <input type="checkbox" class="menu-button" href="#" target="_blank" onClick="alert('todo')"><img src="/svg/menu.svg"></img></input>
+      <label for="menu-control" class="hidden book-menu-overlay menu-button"><img src="/svg/menu.svg"></img></label>
   </li>
 </ul>
 </nav>
