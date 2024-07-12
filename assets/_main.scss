@@ -297,8 +297,7 @@ body[dir="rtl"] .book-menu {
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
-  #menu-control,
-  #toc-control {
+  #menu-control {
     display: inline;
   }
 
@@ -307,10 +306,6 @@ body[dir="rtl"] .book-menu {
     margin-inline-start: -$menu-width;
     font-size: $font-size-base;
     z-index: 1;
-  }
-
-  .book-toc {
-    display: none;
   }
 
   .book-header {
@@ -345,16 +340,6 @@ body[dir="rtl"] .book-menu {
     }
   }
 
-  #toc-control:focus ~ main label[for="toc-control"] {
-    @include outline;
-  }
-
-  #toc-control:checked ~ main {
-    .book-header aside {
-      display: block;
-    }
-  }
-
   // for RTL support
   body[dir="rtl"] #menu-control:checked ~ main {
     .book-menu .book-menu-content {
@@ -366,8 +351,7 @@ body[dir="rtl"] .book-menu {
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
   .book-page,
-  .book-menu .book-menu-content,
-  .book-toc .book-toc-content {
+  .book-menu .book-menu-content {
     padding: $padding-16 * 2 $padding-16;
   }
 }
