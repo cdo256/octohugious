@@ -12,14 +12,14 @@
   font-size: $font-size-14;
   align-self: flex-start;
   overflow: visible;
-  min-height: 100%;
+  height: 100%;
 
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
-    background: var(--sidebar-background);
-    min-height: 100%;
+    height: 100%;
     border-radius: 20px;
+    background: var(--sidebar-background);
   }
 
   a,

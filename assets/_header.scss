@@ -30,12 +30,27 @@
     text-decoration: none;
 }
 
-.site-header .menu-button {
+.site-header .menu-button label {
     padding: 0.1rem 0.5rem;
 }
 
 .site-header .menu-button img {
     vertical-align: middle;
+}
+
+.site-header .menu-button {
+    transition: .2s ease-in-out;
+    transition-property: visibility, opacity;
+    will-change: opacity;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    .site-header .menu-button {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .site-title {
