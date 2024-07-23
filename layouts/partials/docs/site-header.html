@@ -6,18 +6,9 @@
     </div>
 </span>
 <nav>
-{{/* partial "docs/search" . */}}
-{{ partial "docs/inject/menu-before" . }}
-{{ partial "docs/menu-hugo" .Site.Menus.before }}
 
-{{ if .Site.Params.BookMenuBundle }}
-  {{ partial "docs/menu-bundle" . }}
-{{ else }}
-  {{ partial "docs/menu-filetree" . }}
-{{ end }}
 <ul>
   {{ partial "docs/menu-hugo" .Site.Menus.header }}
-  {{ partial "docs/inject/menu-after" . }}
   <li class="menu-button" >
       <label for="menu-control" class="hidden book-menu-overlay"><img src="/svg/menu.svg"></img></label>
   </li>
