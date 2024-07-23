@@ -7,8 +7,8 @@
     {{ partial "docs/post-meta" . }}
     <p>
       {{- .Summary -}}
-      {{ if .Truncated }}
-        <a href="{{ .RelPermalink }}">...</a>
+      {{ if .Truncated }}...
+        <a href="{{ .RelPermalink }}">read more</a>
       {{ end }}
     </p>
   </article>
