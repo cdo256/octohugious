@@ -59,6 +59,7 @@
     }
     a {
       display: block;
+      color: var(--accent);
     }
     a:hover {
       opacity: 0.5;
@@ -112,7 +113,6 @@
 
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
-  .book-page,
   .book-menu .book-menu-content {
     padding: $padding-16 * 2 $padding-16;
   }

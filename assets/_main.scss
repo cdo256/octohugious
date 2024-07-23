@@ -211,8 +211,7 @@ ul.pagination {
 
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
-  .book-page,
-  .book-menu .book-menu-content {
+  .book-page {
     padding: $padding-16 * 2 $padding-16;
   }
 }
