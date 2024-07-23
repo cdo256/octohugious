@@ -1,1 +1,7 @@
-{{ define "dummy" }}{{ end }}
+{{ define "main" }}
+  {{- .Content -}}
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
