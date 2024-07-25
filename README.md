@@ -75,10 +75,10 @@ hugo server --minify
 Below is an example on how to create a new site from scratch:
 
 ```sh
-hugo new site mydocs; cd mydocs
+hugo new site octo-site; cd octo-site
 git init
 git submodule add https://github.com/cdo256/octohugious themes/octohugious
-cp themes/octohugious/* .
+cp -r themes/octohugious/* .
 ```
 
 ```sh
