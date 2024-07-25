@@ -8,8 +8,22 @@
 <nav>
 
 <ul>
-  {{ partial "docs/menu-hugo" .Site.Menus.header }}
-  <li class="menu-button" >
+    {{ range .Site.Menus.header }}
+    <li>
+        <a href="{{ .URL }}"
+           {{ with .Params.class }}class="{{ . }}"{{ end }}
+           {{ if not .Page }}target="_blank" rel="noopener"{{ end }}>
+            {{- .Pre -}}
+            {{ with .Page }}
+            {{ partial "docs/title" .Page }}
+            {{ else }}
+            {{ .Name }}
+            {{ end }}
+            {{- .Post -}}
+        </a>
+    </li>
+    {{- end }}
+    <li class="menu-button" >
       <label for="menu-control" class="hidden book-menu-overlay"><img src="/svg/menu.svg"></img></label>
   </li>
 </ul>
