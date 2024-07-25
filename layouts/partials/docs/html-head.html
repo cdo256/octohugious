@@ -55,5 +55,5 @@ https://github.com/alex-shpak/hugo-book
 {{- end -}}
 
 {{ if .Param "math" }}
-  {{ partialCached "docs/math.html" }}
+  {{ partialCached "docs/math.html" . }}
 {{ end }}
