@@ -53,3 +53,7 @@ https://github.com/alex-shpak/hugo-book
     integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
   {{- end -}}
 {{- end -}}
+
+{{ if .Param "math" }}
+  {{ partialCached "docs/math.html" }}
+{{ end }}
