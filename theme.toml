@@ -1,16 +1,16 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Book"
+name = "Octohugious"
 license = "MIT"
-licenselink = "https://github.com/alex-shpak/hugo-book/blob/master/LICENSE"
-description = "Hugo documentation theme as simple as plain book"
-homepage = "https://github.com/alex-shpak/hugo-book"
-demosite = "https://hugo-book-demo.netlify.app"
-tags = ["responsive", "clean", "documentation", "docs", "flexbox", "search", "mobile", "multilingual", "disqus"]
+licenselink = "https://github.com/cdo256/octohugious/blob/master/LICENSE"
+description = "Light octopus theme"
+homepage = "https://github.com/cdo256/octohugious"
+demosite = "https://octocurious.com"
+tags = ["responsive", "clean", "flexbox", "search", "mobile", "multilingual", "disqus"]
 features = []
 min_version = "0.124"
 
 [author]
-  name = "Alex Shpak"
-  homepage = "https://github.com/alex-shpak/"
+  name = "Christina O'Donnell"
+  homepage = "https://octocurious.com/about"
