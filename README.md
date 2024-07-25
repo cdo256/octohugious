@@ -1,12 +1,9 @@
-# Hugo Book Theme
+# Octohugious theme
 
 [![Hugo](https://img.shields.io/badge/hugo-0.124-blue.svg)](https://gohugo.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Build with Hugo](https://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
 
-### [Hugo](https://gohugo.io) documentation theme as simple as plain book
-
-![Screenshot](https://raw.githubusercontent.com/alex-shpak/hugo-book/master/images/screenshot.png)
+### [Hugo](https://gohugo.io) octopus theme for [octocurious.com](https://octocurious.com).
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -18,18 +15,16 @@
 - [Versioning](#versioning)
 - [Contributing](#contributing)
 
+Custom theme for [octocurious.com](https://octocurious.com) based on [Hugo Book](https://github.com/alex-shpak/hugo-book).
+
 ## Features
 
-- Clean simple design
-- Light and Mobile-Friendly
-- Multi-language support
+- Light, fun design
+- Responsive to mobile layouts
 - Customisable
-- Zero initial configuration
-- Handy shortcodes
 - Comments support
 - Simple blog and taxonomy
 - Primary features work without JavaScript
-- Dark Mode
 
 ## Requirements
 
@@ -42,13 +37,13 @@
 Navigate to your hugo project root and run:
 
 ```
-git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+git submodule add https://github.com/cdo256/octohugious themes/octohugious
 ```
 
-Then run hugo (or set `theme = "hugo-book"`/`theme: hugo-book` in configuration file)
+Then run hugo (or set `theme = "octohugious"`/`theme: octohugious` in configuration file)
 
 ```
-hugo server --minify --theme hugo-book
+hugo server --minify --theme octohugious
 ```
 
 ### Install as hugo module
@@ -65,7 +60,7 @@ Navigate to your hugo project root and add [module] section to your `hugo.toml`:
 ```toml
 [module]
 [[module.imports]]
-path = 'github.com/alex-shpak/hugo-book'
+path = 'github.com/cdo256/octohugious'
 ```
 
 Then, to load/update the theme module and run hugo:
@@ -82,12 +77,12 @@ Below is an example on how to create a new site from scratch:
 ```sh
 hugo new site mydocs; cd mydocs
 git init
-git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
-cp -R themes/hugo-book/exampleSite/content.en/* ./content
+git submodule add https://github.com/cdo256/octohugious themes/octohugious
+cp themes/octohugious/* .
 ```
 
 ```sh
-hugo server --minify --theme hugo-book
+hugo server --minify --theme octohugious
 ```
 
 ## Menu
@@ -127,8 +122,8 @@ headless = true
 
 And Enable it by setting `BookMenuBundle: /menu` in Site configuration.
 
-- [Example menu](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/content.en/menu/index.md)
-- [Example config file](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
+- [Example menu](https://github.com/cdo256/octohugious/blob/master/exampleSite/content.en/menu/index.md)
+- [Example config file](https://github.com/cdo256/octohugious/blob/master/exampleSite/config.yaml)
 - [Leaf bundles](https://gohugo.io/content-management/page-bundles/)
 
 ## Blog
@@ -141,7 +136,7 @@ A blog is not the primary usecase of this theme, so it has only minimal features
 ### Site Configuration
 
 There are a few configuration options that you can add to your `hugo.toml` file.  
-You can also see the `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml).
+You can also see the `yaml` example [here](https://github.com/cdo256/octohugious/blob/master/exampleSite/config.yaml).
 
 ```toml
 # (Optional) Set Google Analytics if you use it to track your website.
@@ -188,7 +183,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/cdo256/octohugious'
 
   # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
   # type.
@@ -345,7 +340,7 @@ If you want lower maintenance, use one of the released versions. If you want to 
 
 ## Contributing
 
-### [Extra credits to contributors](https://github.com/alex-shpak/hugo-book/graphs/contributors)
+### [Extra credits to contributors](https://github.com/cdo256/octohugious/graphs/contributors)
 
 Contributions are welcome and I will review and consider pull requests.  
 Primary goals are:
